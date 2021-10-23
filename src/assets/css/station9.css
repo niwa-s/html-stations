@@ -52,11 +52,17 @@ footer {
 }
 @media (max-width: 320px) {
     .card__description {
-        visibility: hidden;
+        display:none;
+    }
+    .card__title {
+        font-size: 12px;
     }
 }
 @media (min-width: 321px) and (max-width: 768px) {
     .card__description {
         font-size: 10px;
+    }
+    .card__title {
+        font-size: 12px;
     }
 }
