@@ -9,10 +9,14 @@ function getData() {
     return test.map(buildFullName)
 }
 
-function buildFullName(data) {
+function buildFullName({first_name, family_name, ...data}) {
     // Station14の問題はこちらです。想定する答えをここを書いてください。
     // 氏名がわかるようにしつつ、半角スペースで繋いでください。
     // またtest配列のそれぞれのオブジェクトに対して、full_nameのプロパティが追加されるように実装すること
+    return {
+        ...data,
+        full_name: `${family_name} ${first_name}`
+    }
 }
 
 // 出力が想定される答え
